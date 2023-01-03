@@ -11,9 +11,10 @@ router.get('/', (req, res) => {
   });
 
   router.post('/', (req, res) => {
+    if(req.session){
     Comment.create({
         content: req.body.content,
-        user_id: req.body.user_id,
+        user_id: req.session.user_id,
         post_id: req.body.post_id
     })
     .then(dbCommentData => res.json(dbCommentData))
@@ -21,6 +22,7 @@ router.get('/', (req, res) => {
         console.log(err);
         res.status(500).json(err);
     })
+  }
   });
 
 

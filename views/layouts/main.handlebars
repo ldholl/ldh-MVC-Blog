@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ldh-MVC-Blog</title>
+  <link rel="stylesheet" href="/stylesheets/style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+</head>
+
+<body>
+  <div class="wrapper">
+    <header>
+      <h1>
+        <a href="/">ldh-MVC-Blog</a>
+      </h1>
+      <nav class="navbar" role="navigation" aria-label="main navigation">
+        {{#if loggedIn}}
+        <button id="logout" class=" btn btn-no-style">Log Out</button>
+        <a href="/add-post">Add a post</a>
+        {{else}}
+        <a href="/login">Login</a>
+        {{/if}}
+      </nav>
+    </header>
+    <main>
+      {{{ body }}}
+
+    <div>
+
+    </div>
+    </main>
+    <footer class="footer">
+      Bye!
+    </footer>
+  </div>
+{{#if loggedIn}}
+<script src="/javascript/logout.js"></script>
+
+{{/if}}
+<script src="https://kit.fontawesome.com/5db11db1bb.js" crossorigin="anonymous"></script>
+</body>
+
+
+</html>
