@@ -39,12 +39,6 @@ router.get('/', (req, res) => {
     })
 });
 
-//add post
-router.get('/add-post', function (req, res){
-    res.render('add-post');
-});
-
-
 //go to single post
 router.get('/posts/:id', (req, res) => {
     Post.findOne({
@@ -63,7 +57,7 @@ router.get('/posts/:id', (req, res) => {
                 order: [['created_at', 'DESC']],
                 include: {
                     model: User,
-                    attributes: ['username']
+                    attributes: ['username', 'id']
                 }
             }
         ]
