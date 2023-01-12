@@ -14,24 +14,21 @@
 </div> --}}
 
 
-<div class="card column is-one-fifth">
+<div class="card column is-one-fifth has-background-info m-2">
   <header class="card-header">
-    <p class="card-header-title">
+    <p class="card-header-title has-background-link-dark has-text-white">
       {{title}}
     </p>
   </header>
-  <div class="card-content">
+  <div class="card-content has-background-link-light	">
     <div class="content">
       {{content}}
       <br>
       <time>{{format_date created_at}}</time>
+      <p>By: {{user.username}}</p>
     </div>
   </div>
-  <footer class="card-footer">
-    <a href="/posts/{{id}}" class="card-footer-item">View</a>
-    {{!-- {{#if user.id = user_id  }} --}}
-    <a href="#" class="card-footer-item">Edit</a>
-    <a href="#" class="card-footer-item">Delete</a>
-    {{!-- {{/if}} --}}
+  <footer class="card-footer ">
+    <a href="/posts/{{id}}" class="card-footer-item has-text-white">View</a>
   </footer>
 </div>

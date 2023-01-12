@@ -1,28 +1,31 @@
-<div class="post">
+<div class="container">
+<div class="single-post has-background-info-light">
     <div class="post-title">
-        <h2 id={{post.id}}>{{post.title}}</h2>
+        <h2 class="is-size-2" id={{post.id}}>{{post.title}}</h2>
     </div>
-    <div class="post-content">{{post.content}}</div>
-    <div class="post-author">{{user.username}}</div>
+    <div class="post-content is-size-3">{{post.content}}</div>
+    <div class="post-author is-size-4">By: {{post.user.username}}</div>
 </div>
 
 <div class="comments">
-    <h3>Comments</h3>
+    <h3 class="is-size-3">Comments:</h3>
+    <div class="columns is-multiline">
     {{#each post.comments as |comment|}}
     {{> comments comment }}
-    
     {{/each}}
+    </div>
 </div>
 
 {{#if loggedIn}}
-<form class="comment-form" id="add-comment" >
+<form class="comment-form has-text-centered" id="add-comment" >
     <div>
         <textarea id="comment-body"></textarea>
     </div>
     <div>
-        <button  class="button" type="submit">Add Comment</button>
+        <button class="button is-link is-medium" type="submit">Add Comment</button>
     </div>
 </form>
+</div>
 {{/if}}
 
 {{#if loggedIn}}
