@@ -15,7 +15,7 @@ const SequelizeStore = require('connect-session-sequelize')(session.Store);
 require('dotenv').config();
 
 const sess = {
-    secret: process.env.secret,
+    secret: process.env.SECRET,
     cookie: {},
     resave: false,
     saveUninitialized: true,
