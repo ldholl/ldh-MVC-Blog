@@ -10,26 +10,29 @@
 </head>
 
 <body>
-  <div class="wrapper">
-    <header>
-      <h1>
-        <a href="/">ldh-MVC-Blog</a>
-      </h1>
-      <nav class="navbar" role="navigation" aria-label="main navigation">
-        {{#if loggedIn}}
-        <button id="logout" class=" btn btn-no-style">Log Out</button>
-        <a href="/add-post">Add a post</a>
-        {{else}}
-        <a href="/login">Login</a>
-        {{/if}}
-      </nav>
-    </header>
+<header>
+
+<nav class="navbar is-link" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a class="navbar-item" href="/">
+      <img src="https://bulma.io/images/bulma-logo.png" width="112" height="28">
+    </a>
+  <div class="navbar-menu">
+    <div class="navbar-start">
+      {{#if loggedIn}}
+      <a class="navbar-item" href="/dashboard">Dashboard</a>
+        <button id="logout" class="btn-no-style">logout</button>
+      {{else}}
+      <a class="navbar-item" href="/login">Login</a>
+      {{/if}}
+    </div>
+  </div>
+</nav>
+</header>
     <main>
+
       {{{ body }}}
 
-    <div>
-
-    </div>
     </main>
     <footer class="footer">
       Bye!
@@ -37,7 +40,8 @@
   </div>
 {{#if loggedIn}}
 <script src="/javascript/logout.js"></script>
-
+{{else}}
+<script src="/javascript/login.js"></script>
 {{/if}}
 <script src="https://kit.fontawesome.com/5db11db1bb.js" crossorigin="anonymous"></script>
 </body>

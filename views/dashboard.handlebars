@@ -1,0 +1,85 @@
+
+
+{{#if posts.length}}
+<div id="dashboard-header">
+<h1>Your Posts</h1>
+</div>
+<br>
+<div class="post-list columns is-multiline is-8">
+{{#each posts as |post|}}
+{{> post-info post}}
+{{/each}}
+</div>
+{{/if}}
+
+<button class="button post-modal-trigger" data-target="post-modal">Make a Post</button>
+
+
+<div class="modal" id="post-modal">
+  <div class="modal-background"></div>
+  <div class="modal-content">
+    <form class="post-form" id="add-post">
+        <div class="field">
+            <label class="label">Title</label>
+            <div class="control">
+                <input type="text" id="post-title" />
+            </div>
+        </div>
+        <div class="field">
+        <label class="label">Text Content</label>
+        <div class="control">
+            <textarea id="post-content"></textarea>
+        </div>
+    </div>
+    <div class="field">
+    <div class="control">
+   <button class='button' type="submit">Submit</button>
+   </div>
+   </div> 
+</form>
+  </div>
+  <button class="modal-close is-large" aria-label="close"></button>
+</div>
+
+
+
+
+
+
+
+
+
+{{!-- <div class="modal" id="post-modal">
+    <div class="modal-background">
+        <div class="modal-content">
+    
+    <form class="post-form" id="add-post">
+        <div class="field">
+            <label class="label">Title</label>
+            <div class="control">
+                <input type="text" id="post-title" />
+            </div>
+        </div>
+        <div class="field">
+        <label class="label">Text Content</label>
+        <div class="control">
+            <textarea id="post-content"></textarea>
+        </div>
+    </div>
+    <div class="field">
+    <div class="control">
+   <button class='button' type="submit">Submit</button>
+   </div>
+   </div> 
+</form>
+</div>
+    </div>
+    <button class="modal-close" aria-label="close"></button>
+</div> --}}
+
+
+
+
+
+
+<script src="/javascript/add-post.js"></script>

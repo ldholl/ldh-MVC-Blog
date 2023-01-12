@@ -1,26 +1,34 @@
-<form class="login-form" id="login-form">
+<div class="container has-background-link-dark" id="login-holder">
+    <h1>Log In</h1>
+
+<form class="login-form has-background-link-light" id="login-form">
     
-    <div class="field">
+    <div class="field login-form-field">
         <label class="label">Email</label>
         <div class="control">
             <input class="input" type="email" id="login-email" />
         </div>
     </div>
 
-    <div class="field">
+    <div class="field login-form-field">
         <label class="label">Password</label>
         <div class="control">
             <input type="password" id="login-password" />
         </div>
     </div>
-    <div class="field">
+
+    <div class="field login-form-field">
         <div class="control">
-            <button class="button is-link">Submit</button>
+            <button class="button is-link" id="submit-button">Submit</button>
         </div>
     </div>
 </form>
 
-<button class="button signup-modal-trigger" data-target="signup-modal">Sign Up</button>
+
+
+<h2 class="has-text-link-light">OR</h2>
+
+<button class="button signup-modal-trigger is-link is-medium" data-target="signup-modal">Sign Up</button>
 
 <div class="modal" id="signup-modal">
     <div class="modal-background"></div>
@@ -58,5 +66,4 @@
     </div>
     <button class="modal-close" aria-label="close"></button>
 </div>
-
-<script src="/javascript/login.js"></script>
+</div>

@@ -1,8 +1,49 @@
+.navbar-right{
+    float: right;
+}
+
+.post-form, .signup-form{
+    background-color: white;
+    padding: 10px;
+    /* text-align: center; */
+};
+
+#login-form {
+    padding-top: 50px;  	
+}
+
+.login-form-field {
+text-align: center;
+}
+
+#login-email, #login-password {
+    width: 200px;
+    height: 35px;
+   
+}
+
+#login-holder{
+    align-items: center;
+    align-content: center;
+    margin-top: 30px;
+    width: 100%;
+}
+
+#submit-button{
+    margin-bottom: 50px;
+}
 
 
+/* .post-form label, .signup-form label {
+    text-align: left;
+    padding-left: 10px
+} */
 
+.post-form input, .signup-form input {
+    width: 90%;
+}
 
-/* Media Queries */
+/* Media Queries
 @media only screen and (max-width: 600px){
 
 }
@@ -21,4 +62,4 @@
 
 @media only screen and (min-width: 1200px){
 
-};
+}; */

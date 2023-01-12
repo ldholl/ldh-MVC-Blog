@@ -1,12 +1,37 @@
-<div class="card post">
+{{!-- <div class="card post">
     <div class="card-content">
-        <p class="title">
+        <h6 class="title">
             {{title}}
-        </p>
+        </h6>
          <p class="subtitle">
             {{user.username}}
             Created at {{format_date created_at}}
         </p>
-        <a href="/posts/{{id}}">View</a>
+        <footer class="card-footer">
+        <a class="card-footer-item" href="/posts/{{id}}">View</a>
+        </footer>
     </div>      
+</div> --}}
+
+
+<div class="card column is-one-fifth">
+  <header class="card-header">
+    <p class="card-header-title">
+      {{title}}
+    </p>
+  </header>
+  <div class="card-content">
+    <div class="content">
+      {{content}}
+      <br>
+      <time>{{format_date created_at}}</time>
+    </div>
+  </div>
+  <footer class="card-footer">
+    <a href="/posts/{{id}}" class="card-footer-item">View</a>
+    {{!-- {{#if user.id = user_id  }} --}}
+    <a href="#" class="card-footer-item">Edit</a>
+    <a href="#" class="card-footer-item">Delete</a>
+    {{!-- {{/if}} --}}
+  </footer>
 </div>
