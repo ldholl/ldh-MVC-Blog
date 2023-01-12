@@ -6,7 +6,7 @@
 
 {{#each posts as |post|}}
 
-<div class="card column is-one-fifth has-background-info m-2">
+<div id={{id}} class="card column is-one-fifth has-background-info m-2">
   <header class="card-header">
     <p class="card-header-title has-background-link-dark has-text-white">
       {{title}}
@@ -14,7 +14,7 @@
   </header>
   <div class="card-content has-background-link-light	">
     <div class="content">
-      {{content}}
+      <p>{{content}}</p>
       <br>
       <time>{{format_date created_at}}</time>
     </div>
@@ -22,8 +22,8 @@
   <footer class="card-footer ">
     <a href="/posts/{{id}}" class="card-footer-item has-text-white">View</a>
     {{!-- {{#if user.id = user_id  }} --}}
-    <button id='p{{id}}' class="edit-button edit-post-modal-trigger card-footer-item has-text-white button is-info" data-target="edit-post-modal">Edit</button>
-    <button id="{{id}}" class="card-footer-item has-text-white delete-button button is-info">Delete</button>
+    <button id='e{{id}}' class="edit-button edit-post-modal-trigger card-footer-item has-text-white button is-info" data-target="edit-post-modal">Edit</button>
+    <button id="d{{id}}" class="card-footer-item has-text-white delete-button button is-info">Delete</button>
     {{!-- {{/if}} --}}
   </footer>
   </div>
@@ -85,7 +85,7 @@
     </div>
     <div class="field">
     <div class="control">
-   <button class='button' type="submit">Submit</button>
+   <button  id='edit-button' class='button' type="submit">Submit</button>
    </div>
    </div> 
 </form>

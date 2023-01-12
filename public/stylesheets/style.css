@@ -33,6 +33,20 @@ text-align: center;
     margin-bottom: 50px;
 }
 
+.flex-wrapped {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.single-post{
+    border: 5px solid navy;
+}
+
+.comment-container{
+    border: 3px solid rgb(59, 59, 138)
+}
 
 /* .post-form label, .signup-form label {
     text-align: left;
